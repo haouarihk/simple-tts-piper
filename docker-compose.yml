@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   tts-api:
-    build: .
+    build: ghcr.io/haouarihk/simple-tts-piper
     ports:
       - "8000:8000"
     restart: unless-stopped 
