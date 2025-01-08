@@ -5,7 +5,7 @@ import wave
 
 class TTSService:
     def __init__(self):
-        self.model = PiperVoice.load(model_path="./model.onnx")
+        self.model = PiperVoice.load(model_path="./voice_model.onnx")
 
     def generate_audio(self, text: str, voice_name: str = None, language: str = None):
         # Generate audio using Piper

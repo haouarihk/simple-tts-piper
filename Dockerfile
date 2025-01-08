@@ -2,9 +2,8 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
+# Install system dependencies (removed build-essential as it's not needed)
+RUN apt-get update && apt-get install -y espeak-ng \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements and install Python dependencies
